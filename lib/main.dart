@@ -1,3 +1,4 @@
+import 'package:bloc_crypto/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,21 +12,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Colors.black,
+        accentColor: Colors.tealAccent,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('hello'),
-      ),
+      home: HomeScreen(),
     );
   }
 }

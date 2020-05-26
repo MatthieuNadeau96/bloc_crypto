@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:bloc_crypto/models/coin_model.dart';
 import 'package:bloc_crypto/repositories/base_crypto_repository.dart';
 import 'package:http/http.dart' as http;
@@ -25,6 +27,7 @@ class CryptoRepository extends BaseCryptoRepository {
           (json) => coins.add(Coin.fromJson(json)),
         );
       }
+      return coins;
     } catch (err) {
       throw (err);
     }
